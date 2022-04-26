@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="fadeinout">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Mukta:wght@200;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yellow Bikes</title> 
+    </head>
+    <body class="container-fluid">  
+      <nav class="navbar d-flex align-items-center sticky-top justify-content-evenly">
+          <a class="navbar-brand col-md-1" href="./index.html">
+            <img src="./img/yellowBikesLogo.png" alt="yellowBikesLogo"  class="logo">
+          </a>
+          <div class="menuDeNavegacion container col-md-8 justify-content-evenly">              
+            <li><a href="index.html">Página Principal</a></li>
+            <li><a href="./pages/categorias.html">Categorías</a></li>
+            <li><a href="./pages/dondeComprar.html">Dónde Comprar</a></li>
+            <li><a href="./pages/blog.html">Blog</a></li>
+            <li><a href="./pages/quienesSomos.html">Quiénes Somos</a></li>
+            <li><a href="./pages/contacto.html">Contacto</a></li>
+          </div>
+          <form class="col-md-2">
+            <input type="text" placeholder="  Buscar en el sitio" class="formInput">
+            <button class="button">Buscar</button>
+          </form>
+      </nav>
+      <div class="banner row">
+        <div class="container">
+          <img src="./img/banner1.jpg" class="imgBanner" alt="Mountain Bike Modelo X" title="Mountain Bike X">
+        </div>
+      </div>
+      <div class="modelosDestacados container">
+        <div class="tituloModelosDestacados">
+          <h2 class="tituloModelosDestacados__texto">MODELOS DESTACADOS</h2> 
+        </div>
+        <div class="cardsModelosDestacados">
+          <div class="modeloDestacado1">
+              <img src="./img/modeloV.png" alt="Yellow Bike Modelo V" title="Yellow Bike Modelo V" class="modelosDestacadosImg">
+              <p class="modelosDestacados__modelos">Modelo V: Nuestro modelo todo terreno</p>
+          </div>
+          <div class="modeloDestacado2">
+              <img src="./img/modeloW.png" alt="Yellow Bike Modelo W" title="Yellow Bike Modelo W" class="modelosDestacadosImg">
+              <p class="modelosDestacados__modelos">Modelo W: A toda velocidad con comodidad</p>
+          </div>
+          <div class="modeloDestacado3">
+              <img src="./img/modeloX.png" alt="Yellow Bike Modelo X" title="Yellow Bike Modelo X" class="modelosDestacadosImg">
+                  <p class="modelosDestacados__modelos">Modelo X: Velocidad hecha para la ciudad</p>
+          </div>
+          <div class="modeloDestacado4">
+              <img src="./img/modeloZ.png" alt="Yellow Bike Modelo Z" title="Yellow Bike Modelo Z" class="modelosDestacadosImg">
+              <p class="modelosDestacados__modelos">Modelo Z: Nuestra novedad electrica</p>
+          </div>
+        </div>
+      </div>
+      <div class="blog container">
+        <div class="tituloBlog">
+          <h2 class="tituloBlog__texto">NOVEDADES EN EL BLOG</h2>
+        </div>
+        <div class="cardsBlog container d-flex justify-content-center">
+          <div class="blog1 col-md-6">
+              <div class="img1">
+                  <img src="./img/michelinBlog2.png" alt="Nuevas Michelin Lithion" title="Michelin Lithion" class="imgBlog">
+              </div>
+              <div class="blogText1">
+                  <p class="blogTituloArt">Conocé las nuevas cubiertas Michelin Lithion</p>
+                  <p class="regularText">Los neumáticos Michelin Lithion 2 muestran que no tienes que romper el banco para encontrar neumáticos medio decentes que no te dejen... <a href="https://google.com"> Leer más</a></p>
+              </div>
+          </div>
+          <div class="blog2 col-md-6">
+              <div class="img2">
+                  <img src="./img/frenoBlog1.png" alt="Eleccion de frenos" title="Eleccion de Frenos" class="imgBlog">
+              </div>
+              <div class="blogText2">
+                  <p class="blogTituloArt">Cuál freno elegir al momento de montar tu bici?</p>
+                  <p class="regularText">A la hora de elegir bici de carretera parece que la primera pregunta que nos hacemos es: ¿con discos o sin discos? Ante esta disyuntiva, <a href="https://google.com">Leer más</a></p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="irArriba">
+          <a href="#top" name="Ir arriba" class="irArribaTxt">Ir arriba</a>
+      </div>
+      <div class="footer">
+          <h4 class="footerAlign__derechos">Yellow Bikes - Todos los derechos reservados</h4>
+          <p class="footerAlign__direccion1">Santana 195 - Almagro</p>
+          <p class="footerAlign__direccion2">Buenos Aires/Argentina</p>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    </body>  
+      
+
+</html>
