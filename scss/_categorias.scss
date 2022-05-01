@@ -1,0 +1,405 @@
+/*aqui empieza el CSS para la página categorías*/
+
+.containerCategorias {  
+    display: grid;
+    grid-template-columns: 0.1fr 2.8fr 0.1fr;
+    grid-template-rows: 0.2fr 2.8fr 0.2fr 0.2fr;
+    gap: 10px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navBar navBar navBar"
+      "paddingLeft categorias paddingRight"
+      "paddingLeft irArriba paddingRight"
+      "footer footer footer";
+    height: 100vh;
+    width: 100vw;
+  
+  }
+  
+  .categorias {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1.35fr 1.35fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "headCategorias headCategorias headCategorias"
+      "modelosYellow cuadros rodados"
+      "frenos cambios accesorios";
+    grid-area: categorias;
+    height: 100%;
+    margin-top: 10px;
+    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, rgba(0,0,0,1) 90%);
+    padding-top: 1%;
+    border-radius: 20px;
+    justify-content: stretch;
+    align-content: stretch;
+    width: 100%;
+  }
+  
+  
+  
+  
+  
+  .headCategorias {  
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "tituloCategorias descripcionCategorias";
+    grid-area: headCategorias;
+    background-color: #fce803;
+    width: 45%;
+    margin-left: 10px;
+    align-items: center;
+    align-content: center;
+    height: 65%;
+    border-radius: 20px;
+  }
+  
+  .tituloCategorias { 
+    grid-area: tituloCategorias; 
+    margin-left: 12px;
+    font-size: 30px;
+    font-family: 'Mukta';
+    font-weight: 800;
+    display: inline-block;
+    align-content: center;
+    justify-content: left;
+    
+  
+  }
+  
+  .descripcionCategorias { 
+    grid-area: descripcionCategorias; 
+    font-family: 'Mukta';
+    font-size: 15px;
+    font-weight: 200;
+    color: #000000;
+    margin: 0px;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    align-items: center;
+  }
+  
+  .col-12 {
+    padding: 0px;
+  }
+  
+  .modelosYellow {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.9fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "imgModelosYellow"
+      "tituloModelosYellow";
+    grid-area: modelosYellow;
+    border-radius: 20px; 
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, #1b1b1b 90%);
+    width: auto;
+    height: auto;
+    margin: 10px;
+  
+  }
+  
+  .imgModelosYellow { 
+    grid-area: imgModelosYellow; 
+    display: grid;
+    width: 95%;
+    border-radius: 20px;
+    height: auto;
+    align-content: center;
+    justify-items: center;
+  
+  }
+  
+  .imgModelosYellowFormat {
+      margin-top: 1%;
+      width: 90%;
+      height: auto;
+      border-radius: 20px;
+  
+  }
+  
+  .tituloModelosYellow { 
+    display: grid;
+    grid-area: tituloModelosYellow; 
+    font-family: 'Mukta';
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    color: #ffffff;
+  
+  }
+  
+  
+  .cuadros {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.9fr 0.1fr;
+      gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "imgCuadros"
+      "tituloCuadros";
+    grid-area: cuadros;
+    border-radius: 20px; 
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    width: auto;
+    height: auto;
+    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, #1b1b1b 90%);
+    margin: 10px;
+  }
+  
+  .imgCuadros { 
+    grid-area: imgCuadros; 
+    display: grid;
+    width: 95%;
+    border-radius: 20px;
+    margin: 5px;
+    height: 90%;
+    justify-items: center;
+    align-content: center;
+  }
+  
+  .imgCuadrosFormat {
+    margin-top: 1%;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+  
+  }
+  .tituloCuadros { 
+    display: grid;
+    grid-area: tituloCuadros; 
+    font-family: 'Mukta';
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    color: #ffffff;
+  }
+  
+  
+  .rodados {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.9fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "imgRodados"
+      "tituloRodados";
+    grid-area: rodados;
+    border-radius: 20px; 
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, #1b1b1b 90%);
+    width: auto;
+    height: auto;
+    margin: 10px;
+  }
+  
+  
+  .imgRodados { 
+    grid-area: imgRodados; 
+    display: grid;
+    width: 95%;
+    border-radius: 20px;
+    height: 90%;
+    align-content: center;
+    justify-items: center;
+  }
+  
+  .imgRodadosFormat {
+    margin-top: 1%;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  .tituloRodados { 
+    grid-area: tituloRodados; 
+    display: grid;
+    font-family: 'Mukta';
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    color: #ffffff;
+  }
+  
+  .frenos {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.9fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "imgFrenos"
+      "tituloFrenos";
+    grid-area: frenos;
+    border-radius: 20px; 
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, #1b1b1b 90%);
+    width: auto;
+    height: auto;
+    margin: 10px;
+  }
+  
+  .imgFrenos { 
+    grid-area: imgFrenos; 
+    display: grid;
+    width: 95%;
+    border-radius: 20px;
+    margin: 5px;
+    height: 90%;
+    align-content: center;
+    justify-items: center;
+  }
+  
+  .imgFrenosFormat {
+    margin-top: 1%;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  .tituloFrenos { 
+    grid-area: tituloFrenos; 
+    display: grid;
+    font-family: 'Mukta';
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    color: #ffffff;
+  
+  }
+  
+  .cambios {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.9fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "imgCambios"
+      "tituloCambios";
+    grid-area: cambios;
+    border-radius: 20px; 
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, #1b1b1b 90%);
+    width: auto;
+    height: auto;
+    margin: 10px;
+  }
+  
+  .imgCambios { 
+    grid-area: imgCambios; 
+    display: grid;
+    width: 95%;
+    border-radius: 20px;
+    height: 90%;
+    align-content: center;
+    justify-items: center;
+  }
+  
+  .imgCambiosFormat {
+    margin-top: 1%;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  
+  .tituloCambios { 
+    grid-area: tituloCambios; 
+    display: grid;
+    font-family: 'Mukta';
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    color: #ffffff;
+  
+  }
+  
+  .accesorios {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.9fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "imgAccesorios"
+      "tituloAccesorios";
+    grid-area: accesorios;
+    border-radius: 20px; 
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, #1b1b1b 90%);
+    width: auto;
+    height: auto;
+    margin: 10px;
+  
+  }
+  
+  .imgAccesorios { 
+    grid-area: imgAccesorios; 
+    display: grid;
+    width: 95%;
+    border-radius: 20px;
+    margin: 5px;
+    height: 90%;
+    align-content: center;
+    justify-items: center;
+  
+  }
+  
+  .imgAccesoriosFormat {
+    margin-top: 1%;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+  
+  }
+  
+  .tituloAccesorios { 
+    display: grid;
+    grid-area: tituloAccesorios; 
+    font-family: 'Mukta';
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    color: #ffffff;
+  }

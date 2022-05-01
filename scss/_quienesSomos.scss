@@ -1,0 +1,81 @@
+.containerQuienesSomos {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 3.7fr 0.1fr 0.3fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navBar"
+      "mainQuienesSomos"
+      "irArriba"
+      "footer";
+      width: 100vw;
+  }
+  
+  .mainQuienesSomos {  
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: 0.2fr 1.8fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titleQuienesSomos titleQuienesSomos"
+      "imgQuienesSomos txtQuienesSomos";
+    grid-area: mainQuienesSomos;
+    margin: 10px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, rgba(0,0,0,1) 90%);
+  
+  }
+  
+  .titleQuienesSomos { 
+    grid-area: titleQuienesSomos;  
+    display: grid;
+    font-size: 30px;
+    font-family: 'Mukta';
+    font-weight: 800;
+    margin: 5px;
+    width: 45%;
+    height: 80%;
+    border-radius: 20px;
+    background-color: #fce803;
+    padding-left: 15px;
+  
+  }
+  
+  .tituloQuienesSomos {
+    align-self: center;
+    margin: 0px;
+  }
+  
+  .imgQuienesSomos { 
+    grid-area: imgQuienesSomos; 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 10px;
+    
+  }
+  
+  .picQuienesSomos {
+    width: 90%;
+    height: auto;
+    
+  }
+  
+  @media screen and (max-width: 767px) {
+    .picQuienesSomos {
+      width: auto;
+      height: 100px;
+      
+    }
+  }
+  
+  .txtQuienesSomos { 
+    grid-area: txtQuienesSomos; 
+    padding: 10px;
+  
+  }
+  

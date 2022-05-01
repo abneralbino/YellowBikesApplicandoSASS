@@ -1,0 +1,554 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+@import "fonts";
+
+.container-fluid {  
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 0.0fr 1.3fr 1fr 1.1fr 0.0fr;
+  grid-template-rows: 0.1fr 1.4fr 2fr 2fr 0.2fr 0.1fr;
+  gap: 10px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navBar navBar navBar navBar navBar"
+    "paddingLeft banner banner banner paddingRight"
+    "paddingLeft modelosDestacados modelosDestacados modelosDestacados paddingRight"
+    "paddingLeft blog blog blog paddingRight"
+    "paddingLeft irArriba irArriba irArriba paddingRight"
+    "footer footer footer footer footer";
+  padding-left: 0px;
+  padding-right: 0px;
+  justify-items: center;
+}
+
+.fadeinout {
+  animation: fadeinout 1s linear 1 forwards;
+}
+
+@media screen and (max-width: 767px) {
+  .container-fluid {  
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns:1fr;
+    grid-template-rows: 0.3fr 1.4fr 2fr 2fr 0.2fr 0.1fr;
+    gap: 2px 0px;
+    grid-template-areas:
+      "navBar"
+      "banner"
+      "modelosDestacados"
+      "blog"
+      "irArriba"
+      "footer";
+    padding-left: 0px;
+    padding-right: 0px;
+    justify-items: center;
+  }
+}
+
+@keyframes fadeinout {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  
+}
+
+
+.navbar {  
+  display: grid;
+  grid-template-columns: 0.3fr 2.9fr 0.8fr;
+  grid-template-rows: 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo menuDeNavegacion busqueda";
+  grid-area: navBar; 
+  z-index: 1;
+  background-color: #fce803;
+  width: 100vw;
+  max-width: none;
+  
+}
+
+@media screen and (max-width: 767px) {
+  .navbar {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo menuDeNavegacion";
+    grid-area: navBar; 
+    z-index: 1;
+    background-color: #fce803;
+    width: 100vw;
+    max-width: 100vw;
+    
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menuDeNavegacion {
+    display: list-item inline;
+    align-content: center;
+    justify-items: stretch;
+  }
+}
+
+.logo { 
+  grid-area: logo; 
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 50px;
+
+}
+
+.menuColor {
+background-color: #fce803;
+    &.menuDeNavegacion { 
+        grid-area: menuDeNavegacion; 
+        display: grid;
+        font-family: 'Mukta';
+        font-weight: 600;
+        width: 100%;
+        align-content: center;
+            &.navbar-brand {
+                background-color: #fce803;
+              }
+            
+        
+        }
+
+}
+
+a{
+  text-decoration: none;
+  color: #525251;
+  font-size: 15px;
+  margin: center;
+    &:hover {
+        color: $color-fonts;
+        text-decoration: none;
+      }
+}
+
+
+
+li {
+  list-style-type: none;
+  width: 15%;
+  padding: 3px;
+  text-align: center;
+  display: inline-block;
+    &:hover {
+        transform: scale(1.2);
+        color: $color-fonts;
+        
+      }
+    
+}
+
+@media screen and (max-width: 768px) {
+  form { 
+    display: none;
+  }
+
+}
+
+.busqueda { grid-area: busqueda; 
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .busqueda { 
+    display: none;
+  }
+
+}
+
+.banner { 
+  grid-area: banner; 
+  display: grid;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-items: stretch;
+}
+
+
+.imgBanner {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.modelosDestacados {  
+  display: grid;
+  background: rgb(82,81,81);
+  background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, rgba(0,0,0,1) 90%);
+  border-radius: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 1.9fr;
+  gap: 0px 0px;
+  grid-auto-flow: column;
+  grid-template-areas:
+    "tituloModelosDestacados tituloModelosDestacados tituloModelosDestacados tituloModelosDestacados"
+    "cardsModelosDestacados cardsModelosDestacados cardsModelosDestacados cardsModelosDestacados";
+  grid-area: modelosDestacados;
+  justify-items: stretch;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  width: 95%;
+}
+
+
+.tituloModelosDestacados { 
+  display: flex;
+  grid-area: tituloModelosDestacados; 
+  margin: 5px;
+  width: 45%;
+  height: 80%;
+  border-radius: 20px;
+  background-color: #fce803;
+  margin-top: 5px;
+  align-items: stretch;
+  align-content: center;
+  
+}
+
+
+.tituloModelosDestacados__texto {
+  margin-left: 12px;
+  font-size: 220%;
+  font-family: 'Mukta';
+  font-weight: 800;
+}
+
+
+.cardsModelosDestacados {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "modeloDestacado1 modeloDestacado2 modeloDestacado3 modeloDestacado4";
+  grid-area: cardsModelosDestacados;
+  width: 100%;
+  display: flex;
+  
+}
+
+.modeloDestacado1 { 
+  grid-area: modeloDestacado1; 
+  display: grid;
+  width: 95%;
+  border-radius: 20px;
+  margin: 5px;
+  height: 90%;
+  align-items: center;
+  justify-items: center;
+  
+}
+
+.modeloDestacado2 { grid-area: modeloDestacado2; 
+  display: grid;
+  width: 95%;
+  border-radius: 20px;
+  margin: 5px;
+  height: 90%;
+  align-items: center;
+  justify-items: center;
+  
+}
+
+.modeloDestacado3 { grid-area: modeloDestacado3; 
+  display: grid;
+  width: 95%;
+  border-radius: 20px;
+  margin: 5px;
+  height: 90%;
+  align-items: center;
+  justify-items: center;
+  
+
+}
+
+.modeloDestacado4 { grid-area: modeloDestacado4; 
+  display: grid;
+  width: 95%;
+  border-radius: 20px;
+  margin: 5px;
+  height: 90%;
+  align-items: center;
+  justify-items: center;
+  
+
+}
+
+.modelosDestacados__modelos {
+  font-family: 'Mukta';
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  color: #fce803;
+    
+
+  }
+
+.modelosDestacadosImg {
+    margin-top: 5px;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    
+}
+
+.blog {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 1.9fr;
+  gap: 0px 0px;
+  grid-auto-flow: column;
+  grid-template-areas:
+    "tituloBlog tituloBlog"
+    "cardsBlog cardsBlog";
+  grid-area: blog;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, rgba(0,0,0,1) 90%);
+  padding-top: 5px;
+  border-radius: 20px;
+  justify-content: stretch;
+  align-content: stretch;
+  width: 95%;
+}
+
+.tituloBlog { 
+  grid-area: tituloBlog; 
+  margin: 5px;
+  width: 45%;
+  height: 80%;
+  border-radius: 20px;
+  background-color: #fce803;
+  margin-top: 5px;
+  align-items: stretch;
+
+}
+
+
+  .tituloBlog__texto {
+    margin-left: 12px;
+    font-size: 220%;
+    font-family: 'Mukta';
+    font-weight: 800;
+  }
+
+
+.cardsBlog {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "blog1 blog2";
+  grid-area: cardsBlog;
+  width: 100%;
+  justify-items: stretch;
+  align-items: center;
+}
+
+.blog1 { 
+  grid-area: blog1; 
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "img1 blogText1";
+  display: grid;
+  border-radius: 20px; 
+  height: 95%;
+  align-items: center;
+  align-content: center;
+  margin: 10px;
+}
+
+
+.blogText1 {
+  display: grid;
+margin: 10px;
+width: 95%;
+height: 90%;
+padding-right: 5px;
+align-items: center;
+align-content: center;
+color: $color-txt-main; 
+
+}
+
+
+.img1 {
+  display: grid;
+  align-items: flex-start;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .img1 {
+    display: none;
+  }
+
+}
+
+.blog2 { 
+  grid-area: blog2; 
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "img2 blogText2";
+  display: grid;
+  border-radius: 20px; 
+  height: 95%;
+  align-items: center;
+  align-content: center;
+  margin: 10px;
+}
+
+.blogText2 {
+  display: grid;
+  margin: 10px;
+  width: 95%;
+  height: 90%;
+  padding-right: 5px;
+  align-items: center;
+  align-content: center;
+
+}
+
+.img2 {
+  display: grid;
+  align-items: flex-start;
+}
+
+
+@media screen and (max-width: 768px) {
+  .img2 {
+    display: none;
+  }
+
+}
+
+
+.imgBlog {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+
+.blogTituloArt {
+    font-family: 'Mukta';
+    font-weight: 800;
+    font-size: 25px;
+    margin: 5px;
+    height: 70%;
+    line-height: 100%;
+    color: $color-txt-title;
+}
+
+.regularText { 
+  font-family: 'Mukta';
+  font-size: 15px;
+  font-weight: 200;
+  color: $color-txt-main;
+  height: 50%;
+  text-align: justify;
+  line-height: 100%;
+  margin-right: 10px;
+  margin-left: 5px;
+  
+}
+
+.irArriba { 
+  display: grid;
+  grid-area: irArriba; 
+  width: 90%;
+  justify-items: left;
+  justify-content: left;
+  margin-left: 5%;
+
+}
+
+.irArribaTxt { 
+  grid-area: irArriba; 
+  background-color: #fce803;
+  margin: 5px;
+  border-radius: 20px;
+  font-family: 'Mukta';
+  font-weight: 800;
+  font-size: 25px;
+  color: black;
+  width: 100%;
+  text-align: center;
+
+}
+
+.footer { 
+  grid-area: footer; 
+  display: grid;
+  background-color: black;
+  
+  width: 100vw;
+}
+
+.footerAlign__derechos {
+  margin-left: 15px;
+  left: 15px;
+  top: 10px;
+  font-size: 15px;
+  font-family: 'Mukta';
+  font-weight: 200;
+  color: #fce803;
+  font-weight: bold;
+  width: 95%;
+
+}
+
+.footerAlign__direccion1 {
+  margin-left: 15px;
+  top: 30px;
+  color: #fce803;
+  font-size: 15px;
+  font-family: 'Mukta';
+  font-weight: 200;
+  width: 95%;
+
+
+}
+
+.footerAlign__direccion2 {
+  margin-left: 15px;
+  color: #fce803;
+  top: 50px;
+  font-size: 15px;
+  font-family: 'Mukta';
+  font-weight: 200;
+  width: 95%;
+  
+
+}
+/*aqui se termina el CSS para el index*/

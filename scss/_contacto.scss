@@ -1,0 +1,89 @@
+.containerContacto {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 3.2fr 0.1fr 0.3fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav"
+      "mainContacto"
+      "irArriba"
+      "footer";
+  }
+  
+  .mainContacto {  display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-rows: 0.3fr 1.7fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "tituloContacto tituloContacto"
+      "formulario redesSociales";
+    grid-area: mainContacto;
+    margin: 10px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, rgba(0,0,0,1) 90%);
+    width: 55%;
+  }
+  
+  .tituloContacto { 
+    grid-area: tituloContacto; 
+    display: grid;
+    font-size: 30px;
+    font-family: 'Mukta';
+    font-weight: 800;
+    margin: 5px;
+    width: 45%;
+    height: 80%;
+    border-radius: 20px;
+    background-color: #fce803;
+    padding-left: 15px;
+  }
+  
+  .formulario {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ".";
+    grid-area: formulario;
+    margin: 10px;
+  }
+  
+  
+  .formText {
+    margin: 10px;
+    font-size: 15px;
+    font-family: 'Mukta';
+    font-weight: 800;
+    color: #ffffff;
+  }
+  
+  .redesSociales {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2.8fr 0.4fr 0.4fr 0.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "."
+      "instagram"
+      "facebook"
+      "twitter";
+    grid-area: redesSociales;
+  }
+  
+  .rsIcono {
+    height: 45px;
+    width: auto;
+  }
+  
+  .instagram { 
+    grid-area: instagram; 
+  }
+  
+  .facebook { grid-area: facebook; 
+  }
+  
+  .twitter { grid-area: twitter; 
+  }

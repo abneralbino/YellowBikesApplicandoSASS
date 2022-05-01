@@ -1,0 +1,75 @@
+.containerDondeComprar {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 3fr 0.2fr 0.4fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navBar"
+      "mainDondeComprar"
+      "irArriba"
+      "footer";
+  }
+  
+  .mainDondeComprar {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1.9fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "tituloDondeComprar"
+      "mainMapa";
+    grid-area: mainDondeComprar;
+  }
+  
+  .tituloDondeComprar { 
+    grid-area: tituloDondeComprar; 
+    font-size: 30px;
+    font-family: 'Mukta';
+    font-weight: 800;
+    display: grid;
+    justify-content: left;
+    background-color: #fce803;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 45%;
+    align-content: left;
+    
+  }
+  
+  .textTitleDondeComprar {
+    margin: 10px;
+  }
+  
+  .mainMapa {  
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "mapaiFrame listadoMapa";
+    grid-area: mainMapa;
+    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, rgba(0,0,0,1) 90%);
+    border-radius: 20px;
+  }
+  
+  .mapaiFrame { 
+    grid-area: mapaiFrame; 
+    justify-content: center;
+    margin: 10px;
+    margin-top: 0px;
+  }
+  
+  .listadoMapa { 
+    grid-area: listadoMapa; 
+    border-radius: 20px;
+    border: solid #1b1b1b 3px;
+    margin: 10px;
+    margin-top: 0px;
+  }
+  
+  
