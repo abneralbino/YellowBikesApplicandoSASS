@@ -1066,10 +1066,38 @@ li {
   grid-area: twitter; }
 
 .button, .botonContacto {
+  /* a todos los botones del sitio en el menu y en la página contacto*/
   width: 50%;
   border-radius: 5px;
   border: solid #000000 1px; }
 
 .sn {
+  /* al footer de todas las páginas */
   display: inline-block;
   margin: 15px; }
+
+/* aplicando @each a la página del blog*/
+.blog1 {
+  height: 75%; }
+
+.blog2 {
+  height: 75%; }
+
+.blog3 {
+  height: 75%; }
+
+.blog4 {
+  height: 75%; }
+
+/*Aplicando map a la página Blog*/
+.blogbox1 {
+  background-color: #272525ab; }
+
+.blogbox2 {
+  background-color: #272525ab; }
+
+.blogbox3 {
+  background-color: #272525ab; }
+
+.blogbox4 {
+  background-color: #272525ab; }

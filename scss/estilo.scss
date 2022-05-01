@@ -10,7 +10,7 @@
 
 @import "contacto";
 
-.button {
+.button { /* a todos los botones del sitio en el menu y en la página contacto*/
   width: 50%;
   border-radius: 5px;
   border: solid #000000 1px;
@@ -20,7 +20,7 @@
   @extend .button;
 }
 
-@mixin footer($display, $margin) {
+@mixin footer($display, $margin) { /* al footer de todas las páginas */
   display: $display;
   margin: $margin;
 }
@@ -29,4 +29,28 @@
   @include footer (inline-block, 15px);
   
 }
+/* aplicando @each a la página del blog*/
+$heightBlog: 75%;
+$blog: #272525ab;
 
+@each $heightBlog in blog1, blog2, blog3, blog4 {
+  .#{$heightBlog} {
+    height:75%;
+  }
+}
+
+/*Aplicando map a la página Blog*/
+
+$blog: ( 
+  Box1: #272525ab,
+  Box2: #684545ab,
+  Box3: #bdda40ab,
+  Box4: #162c47ab,
+);
+
+@each $blog in box1, box2, box3, box4 {
+  .blog#{$blog}{
+    background-color: #272525ab;
+  }
+
+}
