@@ -1,4 +1,3 @@
-/*aqui empieza el CSS para la página categorías*/
 
 .containerCategorias {  
     display: grid;
@@ -15,6 +14,15 @@
     width: 100vw;
   
   }
+
+  .parallaxCategorias {
+    background-image: url("../img/backgroundCategorias.png");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   
   .categorias {  
     display: grid;
@@ -29,16 +37,12 @@
     grid-area: categorias;
     height: 100%;
     margin-top: 10px;
-    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, rgba(0,0,0,1) 90%);
     padding-top: 1%;
     border-radius: 20px;
     justify-content: stretch;
     align-content: stretch;
     width: 100%;
   }
-  
-  
-  
   
   
   .headCategorias {  
@@ -55,8 +59,17 @@
     margin-left: 10px;
     align-items: center;
     align-content: center;
-    height: 65%;
+    height: 80%;
     border-radius: 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .headCategorias {  
+      width: 100%;
+      height: 100%;
+      
+    }
+
   }
   
   .tituloCategorias { 
@@ -104,11 +117,20 @@
     align-content: center;
     justify-content: center;
     justify-items: center;
-    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, #1b1b1b 90%);
+    background-color: #52525180;
     width: auto;
     height: auto;
     margin: 10px;
   
+  }
+
+  @media screen and (max-width: 767px) {
+    .modelosYellow {  
+      height: 70%;
+      padding-top: 20px;
+    
+    }
+
   }
   
   .imgModelosYellow { 
@@ -161,8 +183,16 @@
     justify-items: center;
     width: auto;
     height: auto;
-    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, #1b1b1b 90%);
+    background-color: #52525180;
     margin: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .cuadros {  
+      height: 70%;
+      padding-top: 20px;
+    }
+
   }
   
   .imgCuadros { 
@@ -211,12 +241,19 @@
     align-content: center;
     justify-content: center;
     justify-items: center;
-    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, #1b1b1b 90%);
+    background-color: #52525180;
     width: auto;
     height: auto;
     margin: 10px;
   }
   
+  @media screen and (max-width: 767px) {
+    .rodados {  
+      height: 70%;
+      padding-top: 20px;
+    }
+
+  }
   
   .imgRodados { 
     grid-area: imgRodados; 
@@ -262,10 +299,17 @@
     align-content: center;
     justify-content: center;
     justify-items: center;
-    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, #1b1b1b 90%);
+    background-color: #52525180;
     width: auto;
     height: auto;
     margin: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .frenos {  
+    height: 70%;
+    padding-top: 20px;
+    }
   }
   
   .imgFrenos { 
@@ -314,10 +358,17 @@
     align-content: center;
     justify-content: center;
     justify-items: center;
-    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, #1b1b1b 90%);
+    background-color: #52525180;
     width: auto;
     height: auto;
     margin: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .cambios {  
+      height: 70%;
+      padding-top: 20px;
+    }
   }
   
   .imgCambios { 
@@ -365,11 +416,18 @@
     align-content: center;
     justify-content: center;
     justify-items: center;
-    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, #1b1b1b 90%);
+    background-color: #52525180;
     width: auto;
     height: auto;
     margin: 10px;
   
+  }
+
+  @media screen and (max-width: 767px) {
+    .accesorios {  
+      height: 70%;
+      padding-top: 20px;
+    }
   }
   
   .imgAccesorios { 
@@ -378,7 +436,7 @@
     width: 95%;
     border-radius: 20px;
     margin: 5px;
-    height: 90%;
+    height: auto;
     align-content: center;
     justify-items: center;
   

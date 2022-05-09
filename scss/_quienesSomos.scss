@@ -12,6 +12,16 @@
       "footer";
       width: 100vw;
   }
+
+  .parallaxQuienesSomos {
+    background-image: url("../img/backgroundQuienesSomos.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
   
   .mainQuienesSomos {  
     display: grid;
@@ -26,10 +36,29 @@
     grid-area: mainQuienesSomos;
     margin: 10px;
     border-radius: 20px;
-    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, rgba(0,0,0,1) 90%);
+    background-color: #5a5a5a93;
   
   }
-  
+
+  @media screen and (max-width: 767px) {
+    .mainQuienesSomos {  
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.1fr 1fr 0.9fr;
+      grid-auto-rows: 1fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "titleQuienesSomos"
+        "imgQuienesSomos"
+        "txtQuienesSomos";
+      grid-area: mainQuienesSomos;
+      margin: 10px;
+      border-radius: 20px;
+    
+    }
+  }
+
   .titleQuienesSomos { 
     grid-area: titleQuienesSomos;  
     display: grid;
@@ -43,6 +72,13 @@
     background-color: #fce803;
     padding-left: 15px;
   
+  }
+
+  @media screen and (max-width: 767px) {
+    .titleQuienesSomos { 
+      width: 100%;
+    
+    }
   }
   
   .tituloQuienesSomos {
@@ -62,20 +98,37 @@
   .picQuienesSomos {
     width: 90%;
     height: auto;
+    border-radius: 20px;
+    border: solid 3px black;
     
   }
   
   @media screen and (max-width: 767px) {
     .picQuienesSomos {
-      width: auto;
-      height: 100px;
-      
+      width: 95%;
+            
     }
   }
   
   .txtQuienesSomos { 
     grid-area: txtQuienesSomos; 
     padding: 10px;
+    background-color: #525251ab;
+    border-radius: 20px;
+    color: white;
+    height: 70%;
   
+  }
+
+  @media screen and (max-width: 767px) {
+    .txtQuienesSomos { 
+      grid-area: txtQuienesSomos; 
+      padding: 10px;
+      background-color: #525251ab;
+      border-radius: 20px;
+      color: white;
+      height: auto;
+    
+    }
   }
   

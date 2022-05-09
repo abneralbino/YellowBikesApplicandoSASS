@@ -11,6 +11,15 @@
       "irArriba"
       "footer";
   }
+
+  .parallaxBlog {
+    background-image: url("../img/backgroundBlog.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   
   .mainBlog {
     display: grid;
@@ -22,7 +31,6 @@
       "titleBlog introBlog"
       "articlesBlog articlesBlog";
     grid-area: mainBlog;
-    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, rgba(0,0,0,1) 90%);
     margin: 10px;
     border-radius: 20px;
     width: 95%;
@@ -43,6 +51,13 @@
     align-content: center;
     padding-left: 5%;
     margin-left: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .titleBlog { 
+      width: 100%;
+    }
+
   }
   
   .tituloPagina {
@@ -74,10 +89,28 @@
     align-items: center;
   }
   
+  @media screen and (max-width: 767px) {
+    .articlesBlog {  
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "blog1"
+        "blog2"
+        "blog3"
+        "blog4";
+      grid-area: articlesBlog;
+      justify-items: center;
+      align-items: center;
+    }
+
+  }
+
   .blog1 { 
     display:flex;
     grid-area: blog1; 
-    border: #fce803 solid 3px;
     border-radius: 20px;
     width: 65%;
     margin: 10px;
@@ -87,11 +120,11 @@
     align-content: center;
     justify-self: left;
   }
-  
+
+    
   .blog2 { 
     display: flex;
     grid-area: blog2; 
-    border: #fce803 solid 3px;
     border-radius: 20px;
     width: 65%;
     margin: 10px;
@@ -106,7 +139,6 @@
   .blog3 { 
     display: flex;
     grid-area: blog3; 
-    border: #fce803 solid 3px;
     border-radius: 20px;
     width: 65%;
     margin: 10px;
@@ -121,7 +153,6 @@
   .blog4 { 
     display: flex;
     grid-area: blog4; 
-    border: #fce803 solid 3px;
     border-radius: 20px;
     width: 65%;
     margin-bottom: 10px;

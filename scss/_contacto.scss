@@ -11,8 +11,17 @@
       "footer";
   }
   
+  .parallaxContacto {
+    background-image: url("../img/backgroundContacto.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .mainContacto {  display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.5fr 0.5fr;
     grid-template-rows: 0.3fr 1.7fr;
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -22,8 +31,24 @@
     grid-area: mainContacto;
     margin: 10px;
     border-radius: 20px;
-    background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, rgba(0,0,0,1) 90%);
-    width: 55%;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
+    .mainContacto {  
+      display: grid;
+      grid-template-columns: 1.8fr 0.2fr;
+      grid-template-rows: 0.3fr 1.7fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "tituloContacto tituloContacto"
+        "formulario redesSociales";
+      grid-area: mainContacto;
+      margin: 10px;
+      border-radius: 20px;
+      width: 90%;
+    }
   }
   
   .tituloContacto { 
@@ -34,10 +59,16 @@
     font-weight: 800;
     margin: 5px;
     width: 45%;
-    height: 80%;
-    border-radius: 20px;
+    height: 70%;
+    border-radius: 15px;
     background-color: #fce803;
     padding-left: 15px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .tituloContacto { 
+      width: 100%
+    }
   }
   
   .formulario {  display: grid;
@@ -48,7 +79,9 @@
     grid-template-areas:
       ".";
     grid-area: formulario;
-    margin: 10px;
+    background-color: #52525180;
+    border-radius: 15px;
+    padding: 10px;
   }
   
   

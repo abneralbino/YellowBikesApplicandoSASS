@@ -10,6 +10,8 @@
 
 @import "contacto";
 
+@import "fonts";
+
 .button { /* a todos los botones del sitio en el menu y en la página contacto*/
   width: 50%;
   border-radius: 5px;
@@ -19,6 +21,7 @@
 .botonContacto {
   @extend .button;
 }
+
 
 @mixin footer($display, $margin) { /* al footer de todas las páginas */
   display: $display;
@@ -31,7 +34,7 @@
 }
 /* aplicando @each a la página del blog*/
 $heightBlog: 75%;
-$blog: #272525ab;
+$blog: #52525180;;
 
 @each $heightBlog in blog1, blog2, blog3, blog4 {
   .#{$heightBlog} {
@@ -48,9 +51,37 @@ $blog: (
   Box4: #162c47ab,
 );
 
-@each $blog in box1, box2, box3, box4 {
-  .blog#{$blog}{
-    background-color: #272525ab;
+@media screen and (max-width: 767px) {
+  .blogbox1 { 
+    height: auto;
+    width: 90%;
   }
 
+  .blogbox2 { 
+    height: auto;
+    width: 90%;
+  }
+
+  .blogbox3 { 
+    height: auto;
+    width: 90%;
+  }
+
+  .blogbox4 { 
+    height: auto;
+    width: 90%;
+  }
+
+}
+
+@each $blog in box1, box2, box3, box4 {
+  .blog#{$blog}{
+    background-color: #525251b7;
+  }
+
+}
+
+ul {
+  list-style-type: none;
+  
 }

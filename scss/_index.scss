@@ -6,6 +6,16 @@
 
 @import "fonts";
 
+.parallaxIndex {
+  background-image: url("../img/background.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+}
+
 .container-fluid {  
   display: grid;
   height: 100vh;
@@ -24,6 +34,7 @@
   padding-left: 0px;
   padding-right: 0px;
   justify-items: center;
+  
 }
 
 .fadeinout {
@@ -60,7 +71,7 @@
 
 .navbar {  
   display: grid;
-  grid-template-columns: 0.3fr 2.9fr 0.8fr;
+  grid-template-columns: 0.1fr 2.9fr 0.0fr;
   grid-template-rows: 0.5fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -71,6 +82,7 @@
   background-color: #fce803;
   width: 100vw;
   max-width: none;
+  justify-content: center;
   
 }
 
@@ -88,7 +100,84 @@
     background-color: #fce803;
     width: 100vw;
     max-width: 100vw;
+    justify-content: center;
     
+  }
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  
+}
+
+.formInput {
+  width: 100%;
+  margin-bottom: 5px;
+
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(0, 0, 0);
+}
+
+.nav-item {
+  margin: 0 30px 0 0;
+  width: auto;
+
+}
+
+@media(max-width:768px){
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #fce803;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+
+  }
+
+  .nav-item {
+    margin: 5px 0;
+    width: auto;
+
+  }
+
+  .nav-menu.active {
+    left: 0;
   }
 }
 
@@ -118,6 +207,7 @@ background-color: #fce803;
         font-weight: 600;
         width: 100%;
         align-content: center;
+        justify-content: space-evenly;
             &.navbar-brand {
                 background-color: #fce803;
               }
@@ -154,26 +244,21 @@ li {
     
 }
 
-@media screen and (max-width: 768px) {
-  form { 
-    display: none;
-  }
-
-}
-
-.busqueda { grid-area: busqueda; 
+.busqueda { 
+  grid-area: busqueda; 
   display: grid;
   justify-items: center;
   align-items: center;
+  width: 80%;
 }
 
-
-@media screen and (max-width: 768px) {
-  .busqueda { 
-    display: none;
+@media screen and (max-width: 767px) {
+  .formInput { 
+    width: 50%;
   }
-
 }
+
+
 
 .banner { 
   grid-area: banner; 
@@ -182,6 +267,7 @@ li {
   height: auto;
   align-items: center;
   justify-items: stretch;
+  max-width: 100%;
 }
 
 
@@ -192,8 +278,6 @@ li {
 
 .modelosDestacados {  
   display: grid;
-  background: rgb(82,81,81);
-  background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, rgba(0,0,0,1) 90%);
   border-radius: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.1fr 1.9fr;
@@ -226,12 +310,19 @@ li {
   
 }
 
+@media screen and (max-width: 768px) {
+  .tituloModelosDestacados { 
+    width: 100%; 
+  }
+
+}
 
 .tituloModelosDestacados__texto {
   margin-left: 12px;
   font-size: 220%;
   font-family: 'Mukta';
   font-weight: 800;
+  
 }
 
 
@@ -258,6 +349,7 @@ li {
   height: 90%;
   align-items: center;
   justify-items: center;
+  background-color: #52525180;
   
 }
 
@@ -269,6 +361,7 @@ li {
   height: 90%;
   align-items: center;
   justify-items: center;
+  background-color: #52525180;
   
 }
 
@@ -280,6 +373,7 @@ li {
   height: 90%;
   align-items: center;
   justify-items: center;
+  background-color: #52525180;
   
 
 }
@@ -292,22 +386,22 @@ li {
   height: 90%;
   align-items: center;
   justify-items: center;
-  
+  background-color: #52525180;
 
 }
+
 
 .modelosDestacados__modelos {
   font-family: 'Mukta';
   font-weight: 600;
-  font-size: 15px;
+  font-size: 17px;
   text-align: center;
-  color: #fce803;
-    
-
+  color: #ffffff;
+  
   }
 
 .modelosDestacadosImg {
-    margin-top: 5px;
+    margin-top: 10px;
     width: 90%;
     height: auto;
     border-radius: 20px;
@@ -325,7 +419,6 @@ li {
     "cardsBlog cardsBlog";
   grid-area: blog;
   height: 100%;
-  background: linear-gradient(180deg, rgba(82, 81, 81, 0) 0%, rgba(0,0,0,1) 90%);
   padding-top: 5px;
   border-radius: 20px;
   justify-content: stretch;
@@ -336,7 +429,7 @@ li {
 .tituloBlog { 
   grid-area: tituloBlog; 
   margin: 5px;
-  width: 45%;
+  width: 50%;
   height: 80%;
   border-radius: 20px;
   background-color: #fce803;
@@ -351,6 +444,14 @@ li {
     font-size: 220%;
     font-family: 'Mukta';
     font-weight: 800;
+  }
+
+  @media screen and (max-width: 768px) {
+    .tituloBlog { 
+      width: 100%;
+          
+    }
+  
   }
 
 
@@ -368,7 +469,7 @@ li {
   align-items: center;
 }
 
-.blog1 { 
+.blogIndex1 { 
   grid-area: blog1; 
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -382,6 +483,27 @@ li {
   align-items: center;
   align-content: center;
   margin: 10px;
+  background-color: #52525180;
+}
+
+@media screen and (max-width: 768px) {
+  .blogIndex1 { 
+    grid-area: blog1; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "img1 blogText1";
+    display: grid;
+    border-radius: 20px; 
+    height: 95%;
+    align-items: center;
+    align-content: center;
+    margin: 10px;
+    background-color: #52525180;
+  }
+
 }
 
 
@@ -398,6 +520,7 @@ color: $color-txt-main;
 }
 
 
+
 .img1 {
   display: grid;
   align-items: flex-start;
@@ -411,7 +534,7 @@ color: $color-txt-main;
 
 }
 
-.blog2 { 
+.blogIndex2 { 
   grid-area: blog2; 
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -425,6 +548,25 @@ color: $color-txt-main;
   align-items: center;
   align-content: center;
   margin: 10px;
+  background-color: #52525180;
+}
+
+@media screen and (max-width: 768px) {
+  .blogIndex2 {
+    grid-area: blog2;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "blogText2";
+    display: grid;
+    border-radius: 20px;
+    height: 95%;
+    align-items: center;
+    align-content: center;
+    margin: 10px;
+    background-color: #52525180;
+  }
 }
 
 .blogText2 {
@@ -441,6 +583,7 @@ color: $color-txt-main;
 .img2 {
   display: grid;
   align-items: flex-start;
+  width: 100%;
 }
 
 
@@ -497,7 +640,7 @@ color: $color-txt-main;
   grid-area: irArriba; 
   background-color: #fce803;
   margin: 5px;
-  border-radius: 20px;
+  border-radius: 10px;
   font-family: 'Mukta';
   font-weight: 800;
   font-size: 25px;
@@ -552,3 +695,4 @@ color: $color-txt-main;
 
 }
 /*aqui se termina el CSS para el index*/
+
